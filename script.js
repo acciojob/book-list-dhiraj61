@@ -7,7 +7,11 @@ let delet = '';
 let table = document.getElementById('book-list');
 let tbody = document.getElementById('tbody');
 let bookList = [
-    
+	{
+		title:'Book1',
+		author:"Author1",
+		isbn:1
+	}
 ]
 
 submit.addEventListener('click', (e) => {
