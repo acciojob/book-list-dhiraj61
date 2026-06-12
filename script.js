@@ -36,17 +36,17 @@ bookRefresh();
 function bookRefresh() {
     tbody.innerHTML = '';
     bookList?.forEach((data) => {
-        tr = document.createElement('tr');
-        titleTd = document.createElement('td');
+        let tr = document.createElement('tr');
+        let titleTd = document.createElement('td');
         titleTd.textContent = data?.title;
         tr.appendChild(titleTd);
-        authorTd = document.createElement('td');
+        let authorTd = document.createElement('td');
         authorTd.textContent = data?.author;
         tr.appendChild(authorTd);
-        isbnTd = document.createElement('td');
+        let isbnTd = document.createElement('td');
         isbnTd.textContent = data?.isbn;
         tr.appendChild(isbnTd);
-        deleteTd = document.createElement('td');
+        let deleteTd = document.createElement('td');
         deleteTd.innerHTML = `<button id="${data?.isbn}" class="delete">x</button>`;
         tr.appendChild(deleteTd);
         tbody.appendChild(tr);
