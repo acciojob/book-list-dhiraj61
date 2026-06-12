@@ -4,14 +4,9 @@ let author = document.getElementById('author');
 let isbn = document.getElementById('isbn');
 let submit = document.getElementById('submit');
 let delet = '';
-let table = document.getElementById('book-list');
-let tbody = document.getElementById('tbody');
+let table = document.getElementById('.table table-striped');
+let tbody = document.getElementById('book-list');
 let bookList = [
-	{
-		title:'Book1',
-		author:"Author1",
-		isbn:1
-	}
 ]
 
 submit.addEventListener('click', (e) => {
@@ -56,7 +51,7 @@ function bookRefresh() {
 tbody?.addEventListener('click',(e)=>{
     e.preventDefault();
     bookList = bookList?.filter((data)=>{
-        return data?.isbn !== e.srcElement.id;
+        return data?.isbn !== e.target.id;
     })
     bookRefresh();
 })
